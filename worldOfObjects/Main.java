@@ -2,33 +2,22 @@ package worldOfObjects;
  
 public class Main{
     public static void main(String[] args) {
-        Car nissan = new Car();
-        // System.out.println(nissan.make);
-        // System.out.println(nissan.price);
-        // System.out.println(nissan.year);
-        // System.out.println(nissan.color);
+        Car nissan = new Car("Nissan",5000,2020,"red");
 
-        nissan.make = "Nissan";
-        nissan.price = 5000;
-        nissan.year = 2020;
-        nissan.color = "red";
+        double newPrice = nissan.getPrice() / 2;
+        nissan.setPrice(newPrice);
 
-        // System.out.println(nissan.make);
-        // System.out.println(nissan.price);
-        // System.out.println(nissan.year);
-        // System.out.println(nissan.color);
+        System.out.println("This "+nissan.getMake()+" is worth $"+nissan.getPrice()+
+        ". It was built in "+nissan.getYear()+". It is "+nissan.getColor()+".\n");
 
-        System.out.println("This "+nissan.make+" is worth $"+nissan.price+
-        ". It was built in "+nissan.year+". It is "+nissan.color+".\n");
+        Car dodge = new Car("Dodge",11000,2019,"blue");
 
-        Car dodge = new Car();
-        dodge.make = "Dodge";
-        dodge.price = 11000;
-        dodge.year = 2019;
-        dodge.color = "blue";
+        dodge.setColor("jetBlack");
 
-        System.out.println("This "+dodge.make+" is worth $"+dodge.price+
-        ". It was built in "+dodge.year+". It is "+dodge.color+".\n");
+        dodge.setPrice(dodge.getPrice() / 2);
+
+        System.out.println("This "+dodge.getMake()+" is worth $"+dodge.getPrice()+
+        ". It was built in "+dodge.getYear()+". It is "+dodge.getColor()+".\n");
     }
 }
 
